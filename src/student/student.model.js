@@ -1,4 +1,5 @@
 const { Sequelize, sequelize } = require("../db.js");
+const Branch = require("../branch/branch.model.js")
 
 class Student extends Sequelize.Model {}
 
@@ -23,5 +24,8 @@ Student.init(
   },
   { sequelize }
 );
+
+// Associations 
+Student.belongsTo(Branch);
 
 module.exports = Student;

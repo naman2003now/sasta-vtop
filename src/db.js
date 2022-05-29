@@ -9,9 +9,11 @@ const authenticate = async () => {
   try {
     await sequelize.authenticate();
     console.log("Successfully connected to Postgres");
+		sequelize.sync({force: true})
   } catch (err) {
     console.log("Error while connecting to database", err);
   }
+
 };
 
 authenticate();
