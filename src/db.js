@@ -14,6 +14,5 @@ const authenticate = async () => {
   }
 };
 
-
 authenticate();
-module.exports = {Sequelize, sequelize}
+module.exports = { Sequelize, sequelize };
