@@ -11,7 +11,6 @@ class StudentController {
   }
 
   #initRoutes() {
-		console.log("Fuck You")
     this.router.get("/", this.#homeRoute);
 
     this.router.post("/create", this.#createStudent);

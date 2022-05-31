@@ -3,6 +3,7 @@ const { Sequelize } = require("sequelize");
 var sequelize = new Sequelize("vtop", "naman", "password", {
   host: "localhost",
   dialect: "postgres",
+	logging: false,
 });
 
 const authenticate = async () => {

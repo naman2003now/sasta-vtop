@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const { PORT } = require("./config/app.config.js");
+const associate = require("./associations.js")
 
 class App {
   app = express();
@@ -11,6 +12,7 @@ class App {
     this.#initHomeRoute();
     this.#initControllers(controllers);
     this.#listen();
+		associate();
   }
 
   #useMiddlewares() {
